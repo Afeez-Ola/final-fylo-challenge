@@ -1,0 +1,736 @@
+:root {
+    --dark-blue-intro-and-email: hsl(217, 28%, 15%);
+    --dark-blue-main-background: hsl(218, 28%, 13%);
+    --dark-blue-footer: hsl(216, 53%, 9%);
+    --dark-blue-testimonial: hsl(219, 30%, 18%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --white: hsl(0, 0%, 100%);
+    --button: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    --headerfont: "Raleway", sans-serif;
+    --bodyfont: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("/images/bg-curvy-mobile.svg");
+    background-color: var(--dark-blue-main-background);
+    width: 100%;
+    height: 100vh;
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+button {
+    font-size: 14px;
+    font-family: var(--bodyfont);
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    list-style-type: none;
+    color: var(--white);
+    text-decoration: none;
+}
+
+a:hover {
+    color: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+    line-height: 1.4;
+}
+
+button {
+    background: var(--button);
+    color: var(--white);
+    padding: .8rem 1rem;
+    border-radius: 20px;
+    width: 85%;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+
+/********** Navbar section starts *********/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.logo img {
+    width: 60%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 70%;
+    }
+}
+
+
+/********** Navbar section ends *********/
+
+
+/******** Intro Section starts ********/
+
+#intro {
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.intro-content {
+    width: 100%;
+}
+
+.intro-img {
+    width: 35%;
+    margin: 30px auto;
+}
+
+.intro-text {
+    width: 38%;
+    margin: 20px auto;
+}
+
+.intro-text p,
+.intro-text h2 {
+    margin: 20px auto;
+}
+
+.btn-1 {
+    width: 50%;
+    margin: auto 110px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 500px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .intro-img {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .intro-text {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .btn-1 {
+        width: 80%;
+        margin: auto 30px;
+    }
+}
+
+
+/******** Intro Section ends ********/
+
+
+/**********Advertisement section starts *********/
+
+#ads {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+#ads img {
+    width: 130px;
+    margin-top: 3rem;
+    margin-bottom: .7rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.access,
+.security,
+.collaboration,
+.storage {
+    width: 60%;
+}
+
+.access-img,
+.collaboration-img {
+    width: 35%;
+    margin: 30px auto 14px;
+}
+
+.security-img,
+.storage-img {
+    height: 50%;
+    width: 30%;
+    margin: 30px auto 14px;
+}
+
+.access-img img,
+.collaboration-img img {
+    position: relative;
+    left: 30px;
+}
+
+.security-img img {
+    position: relative;
+    bottom: 35px;
+    left: 23px;
+}
+
+.access-text,
+.collaboration-text {
+    width: 65%;
+    margin: auto;
+}
+
+.access-text h3,
+.security-text h3,
+.collaboration-text h3,
+.storage-text h3 {
+    margin-bottom: 12px;
+}
+
+.security-text,
+.storage-text {
+    width: 68%;
+    margin: auto;
+}
+
+@media screen and (min-width:375px) and (max-width: 768px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .access,
+    .security,
+    .collaboration,
+    .storage {
+        width: 100%;
+    }
+
+    .access-text,
+    .security-text,
+    .collaboration-text,
+    .storage-text {
+        width: 100%;
+        margin: auto;
+    }
+
+    .access-img img,
+    .collaboration-img img {
+        left: -5px;
+        position: relative;
+    }
+
+    .security-img img,
+    .storage-img img {
+        left: -18px;
+        position: relative;
+        bottom: 0px;
+    }
+}
+
+
+/**********Advertisement section ends *********/
+
+
+/**********Productive section starts *********/
+
+.productive {
+    display: flex;
+}
+
+.productive-img img {
+    width: 88%;
+}
+
+.productive-text {
+    position: relative;
+    top: 130px;
+    width: 40%;
+}
+
+.productive-text p,
+.productive-text h2 {
+    margin-bottom: 10px;
+    text-align: initial;
+}
+
+.productive-text h2 {
+    width: 50%;
+}
+
+hr {
+    width: 32%;
+    border: thin solid var(--cyan);
+    display: flex;
+    margin-left: 0;
+    padding: 0;
+}
+
+.how-fylo {
+    text-align: center;
+    color: var(--cyan);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.how-fylo p {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.how-fylo img {
+    width: 20px;
+    height: 20px;
+    margin-top: 1rem;
+    margin-left: .3rem;
+    position: relative;
+    bottom: 8px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 700px) {
+    .productive {
+        flex-direction: column;
+    }
+
+    .productive-img img {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .productive-text {
+        top: 50px;
+        width: 100%;
+    }
+
+    .productive-text h2 {
+        font-size: 16px;
+        font-weight: 700;
+        text-align: start;
+        margin-bottom: 12px;
+    }
+
+    .productive-text p {
+        margin-bottom: 10px;
+    }
+
+    hr {
+        width: 50%;
+    }
+}
+
+
+/**********Productive section ends *********/
+
+
+/**********Team section starts *********/
+
+#team {
+    margin-top: 5rem;
+    position: relative;
+    top: 120px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.quote {
+    width: 5%;
+    position: relative;
+    top: 17px;
+    z-index: -1;
+    left: 15px;
+}
+
+.profile {
+    background: var(--dark-blue-testimonial);
+    margin: 0 auto 1.5rem auto;
+    padding: 1rem;
+    width: 30%;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic img {
+    position: relative;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profile-text p {
+    text-align: initial;
+    width: 97%;
+    margin: auto;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 8px;
+}
+
+.detail h4 {
+    position: relative;
+    left: 70px;
+    bottom: 12px;
+    font-weight: 700;
+}
+
+.detail p {
+    position: relative;
+    right: 7px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 375px) and (max-width: 765px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .profile {
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    .profile-text h4 {
+        word-spacing: 2px;
+    }
+
+    .profile-text p {
+        font-size: 12px;
+        width: 100%;
+        line-height: 1.6;
+    }
+
+    .detail p {
+        left: 13px;
+    }
+
+    .quote {
+        width: 15%;
+        top: 32px;
+        left: 10px;
+    }
+}
+
+
+/**********Team section ends *********/
+
+
+/******** CTA section starts ******8*/
+
+.get-access {
+    background: var(--dark-blue-intro-and-email);
+    margin: 0 auto 1.5rem auto;
+    padding: .5rem 1.5rem 2rem .5rem;
+    width: 80%;
+    position: relative;
+    height: 35vh;
+    top: 300px;
+    z-index: 2;
+}
+
+.get-access input {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 40px;
+    padding: 1rem;
+    position: relative;
+    right: 120px;
+}
+
+.btn-3 {
+    width: 30%;
+    position: relative;
+    left: 550px;
+    bottom: 42px;
+}
+
+.get-access h2 {
+    margin: 30px auto 25px;
+}
+
+.get-access p {
+    width: 76%;
+    margin: 0 auto 30px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 756px) {
+    .get-access {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .get-access p {
+        width: 100%;
+        line-height: 1.6;
+    }
+
+    .btn-3 {
+        width: 100%;
+        position: relative;
+        left: 8px;
+        top: 20px;
+    }
+
+    .get-access input {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        left: 8px;
+    }
+}
+
+
+/******** CTA section ends ******8*/
+
+
+/******** Footer section starts ********/
+
+footer {
+    background-color: var(--dark-blue-footer);
+    position: relative;
+    top: 150px;
+    padding: 0% 4% 2%;
+    height: 80vh;
+}
+
+.logo-image {
+    margin: auto 28px 20px;
+    position: relative;
+    top: 250px;
+    left: 40px;
+    width: 10%;
+}
+
+.location {
+    display: flex;
+    margin-bottom: 12px;
+    position: relative;
+    top: 280px;
+    left: 50px;
+}
+
+.location img {
+    width: 1%;
+    height: 22px;
+    margin: 0 20px;
+}
+
+.location p {
+    text-align: initial;
+}
+
+.phone {
+    display: flex;
+    margin: 20px 18px;
+    position: relative;
+    left: 35%;
+    top: 180px;
+}
+
+.email {
+    display: flex;
+    margin: 20px 18px;
+    position: relative;
+    left: 35%;
+    top: 200px;
+}
+
+.phone img,
+.email img {
+    width: 1%;
+    height: 15px;
+}
+
+.email p,
+.phone p {
+    margin: 0 15px;
+    font-size: 13px;
+}
+
+.about {
+    position: relative;
+    left: 58%;
+    top: 90px;
+    width: 40%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.about p {
+    text-align: initial;
+    margin-bottom: 12px;
+}
+
+.contact {
+    position: relative;
+    left: 72%;
+    bottom: 60px;
+    width: 40%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.contact p {
+    text-align: initial;
+    margin-bottom: 12px;
+}
+
+
+/****** Media ******/
+
+.media {
+    margin: auto 102px;
+    position: relative;
+    left: 80%;
+    bottom: 170px;
+}
+
+.fab {
+    font-weight: 400;
+    font-size: 20px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+    color: hsl(0, 0%, 100%);
+}
+
+
+/******* Attribution section *******/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 375px) and (max-width: 765px) {
+    footer {
+        height: 115vh;
+    }
+
+    .logo-image {
+        top: 190px;
+        right: 200px;
+        width: 40%;
+        left: -2px;
+    }
+
+    .location {
+        top: 220px;
+        left: 0;
+    }
+
+    .location img {
+        width: 15px;
+    }
+
+    .location p {
+        line-height: 2;
+        width: 77%;
+    }
+
+    .phone {
+        position: relative;
+        top: 240px;
+        left: 6px;
+    }
+
+    .phone img,
+    .email img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .email {
+        left: 6px;
+        top: 260px;
+    }
+
+    .about {
+        left: 24px;
+        top: 270px;
+    }
+
+    .contact {
+        left: 24px;
+        top: 300px;
+    }
+
+    .media {
+        left: 30px;
+        top: 290px;
+    }
+
+    .attribution {
+        position: relative;
+        top: 300px;
+    }
+}
